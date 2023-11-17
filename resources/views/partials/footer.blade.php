@@ -1,3 +1,8 @@
+@php
+    $menuNav = config(menuNav);
+@endphp
+
+
 <footer>
     <div class="container">
 
@@ -18,7 +23,7 @@
                 <li>link</li>
                 <li>link</li>
                 <li>link</li>
-                <li>link</li>
+                <li>{{ $menuNav[0]['name'] }}</li>
             </ul>
         </nav>
 
