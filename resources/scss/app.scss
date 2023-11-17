@@ -1,1 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
+
+@import './partials/general';
+@import './partials/typography';
+@import './partials/utilities';
+@import './partials/variabiles';
+@import './partials/footer.scss';
+@import './partials/header.scss';
