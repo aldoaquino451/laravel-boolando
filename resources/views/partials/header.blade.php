@@ -1,56 +1,36 @@
-<header>
-    <div class="container">
+@php
+    $menuList = config('menus.menuList');
+    $iconsList = config('menus.iconsList');
+@endphp
 
+<header>
+    <div class="container d-flex justify-content-between h-100 align-items-center">
         <nav>
-            <ul>
-                <li>link</li>
+            <ul class="d-flex gap-3">
+                @foreach ($menuList as $item)
+                    <li>
+                        <a href="{{ $item['link'] }}">{{ $item['text'] }}</a>
+                    </li>
+                @endforeach
             </ul>
         </nav>
 
-        <div class="image">
-            <img src="../img/boolean-logo.png" alt="logo">
+        <div class="h-50">
+            <a href="/">
+                <img class="h-100" src="../img/boolean-logo.png" alt="logo">
+            </a>
         </div>
 
         <nav>
-            <ul>
-                <li>link</li>
+            <ul class=" d-flex gap-3">
+                @foreach ($iconsList as $icon)
+                    <li>
+                        <a href="{{ $icon['link'] }}">
+                            <i class="{{ $icon['icon'] }}"></i>
+                        </a>
+                    </li>
+                @endforeach
             </ul>
         </nav>
-
     </div>
 </header>
-
-
-{{-- <header>
-    <div class="container">
-
-      <nav>
-        <ul>
-          <li
-          v-for="(item, index) in menuLeft" :key="index"
-          >
-            <a :href="item.link">
-              {{ item.text }}
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="image">
-        <img src="../assets/img/boolean-logo.png" alt="logo">
-      </div>
-
-      <nav>
-        <ul>
-          <li
-          v-for="(item, index) in menuRight" :key="index"
-          >
-            <a :href="item.link">
-              <i :class="item.icon"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-    </div>
-  </header> --}}

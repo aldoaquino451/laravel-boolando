@@ -8,6 +8,11 @@
 
     <title>Laravel Boolando</title>
 
+    {{-- font awesome  --}}
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css'
+        integrity='sha512-KOWhIs2d8WrPgR4lTaFgxI35LLOp5PRki/DxQvb7mlP29YZ5iJ5v8tiLWF7JLk5nDBlgPP1gHzw96cZ77oD7zQ=='
+        crossorigin='anonymous' />
+
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -21,10 +26,7 @@
     @include('partials.header')
 
     <main>
-
         @yield('content')
-
-
     </main>
 
     @include('partials.footer')

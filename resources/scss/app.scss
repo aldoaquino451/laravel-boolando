@@ -1,8 +1,126 @@
 @import '~bootstrap/scss/bootstrap';
 
-@import './partials/general';
-@import './partials/typography';
-@import './partials/utilities';
 @import './partials/variabiles';
-@import './partials/footer.scss';
-@import './partials/header.scss';
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: $main-color;
+  height: 60px;
+
+  li:hover {
+    scale: 1.05;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+main {
+  flex-grow: 1;
+
+  .my-product-image {
+    .front-image {
+      display: block;
+    }
+
+    .back-image {
+      display: none;
+    }
+  }
+
+  .my-product-image:hover {
+    .front-image {
+      display: none;
+    }
+
+    .back-image {
+      display: block;
+    }
+  }
+
+  .my-heart {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+
+    .fa-solid.favorite {
+      color: red;
+    }
+
+    &:hover .fa-regular {
+      color: red;
+    }
+  }
+
+  .my-badges {
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+
+    .my-discount {
+      background-color: red;
+    }
+
+    .my-tag {
+      background-color: green;
+    }
+  }
+
+  .my-product-info {
+    p {
+      margin: 0;
+      line-height: 100%;
+
+      &.my-brand {
+        font-size: 14px;
+      }
+
+    }
+
+    .my-price {
+      font-size: 14px;
+      color: red;
+    }
+
+    .my-discount-price {
+      font-size: 14px;
+      color: gray;
+    }
+  }
+
+}
+
+footer {
+  background-color: $secondary-color;
+  font-size: 13px;
+
+  .title {
+    font-size: 18px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
